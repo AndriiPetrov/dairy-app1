@@ -1,0 +1,14 @@
+<h3>Items</h3>
+<div class="dairyElement-input-wrapper">
+  <input type="text" [(ngModel)]="dairyText" placeholder="Type name here..." value={{dairyText}} />
+  <button class="btn btn-info" (click)="addDairyElement()">Submit</button>
+</div>
+<div *ngFor="let dairyElement of dairyService.getDairyElements()">
+  <div class="dairyElementWrapper" >
+    <a class="ankor" routerLink='/dairyelements/{{dairyElement.id}}'>{{dairyElement.text}}</a><button class="removedairyElement" (click)="removeDairyElement(dairyElement.id)">Delete</button>
+  </div>
+</div>
+<!-- <div>
+  <router-outlet></router-outlet>
+  
+</div> -->
