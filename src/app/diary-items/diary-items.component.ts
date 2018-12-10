@@ -11,7 +11,7 @@ export class DiaryItemsComponent implements OnInit {
 
   public dairyText: string;
 
-  constructor(private dairyService: DairyService) { }
+  constructor(public dairyService: DairyService) { }
 
   ngOnInit() {
     this.dairyText = '';
